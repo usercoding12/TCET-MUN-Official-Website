@@ -27,12 +27,11 @@ TCET MUN 2026 website.
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap
 - Font Awesome
 
 ## Maintained By
 
-TCET MUN Committee
+TCET MUN Core Committee
 Thakur College of Engineering and Technology
 
 © 2026 TCET MUN
