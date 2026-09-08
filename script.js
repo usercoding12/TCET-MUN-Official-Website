@@ -198,3 +198,141 @@ setInterval(() => {
     slides[current].classList.add("active");
 
 }, 3000);
+
+/* ================================
+   REGISTRATION MENU
+================================ */
+
+const registerBtn = document.getElementById("registerBtn");
+const registrationMenu = document.getElementById("registrationMenu");
+
+if (registerBtn && registrationMenu) {
+    registerBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (window.innerWidth <= 768) {
+            registrationMenu.classList.toggle("show");
+        }
+    });
+}
+
+/* =========================================
+   REGISTRATION DROPDOWN
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const registerWrappers = document.querySelectorAll(".register-wrapper");
+
+    registerWrappers.forEach(wrapper => {
+
+        const button = wrapper.querySelector(".register-btn");
+
+        if (!button) return;
+
+        button.addEventListener("click", (event) => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Close other registration menus
+            registerWrappers.forEach(otherWrapper => {
+                if (otherWrapper !== wrapper) {
+                    otherWrapper.classList.remove("open");
+                }
+            });
+
+            // Open / close this menu
+            wrapper.classList.toggle("open");
+
+        });
+
+    });
+
+
+    // Close dropdown when clicking somewhere else
+    document.addEventListener("click", () => {
+
+        registerWrappers.forEach(wrapper => {
+            wrapper.classList.remove("open");
+        });
+
+    });
+
+
+    // Don't close menu when clicking inside it
+    document.querySelectorAll(".registration-menu").forEach(menu => {
+
+        menu.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+    });
+
+});
+
+
+/* ===== MOBILE REGISTER DROPDOWN ===== */
+
+document.querySelectorAll(".register-wrapper").forEach(wrapper => {
+
+    const button = wrapper.querySelector(".register-btn");
+
+    if (button) {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            wrapper.classList.toggle("open");
+        });
+    }
+});
+
+/* Close registration menu when clicking outside */
+document.addEventListener("click", function (e) {
+    document.querySelectorAll(".register-wrapper").forEach(wrapper => {
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove("open");
+        }
+    });
+});
+
+/* =====================================================
+   FINAL MOBILE REGISTRATION DROPDOWN
+   ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const registerWrappers = document.querySelectorAll(".register-wrapper");
+
+    registerWrappers.forEach(function (wrapper) {
+
+        const button = wrapper.querySelector(".register-btn");
+
+        if (!button) return;
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            wrapper.classList.toggle("open");
+
+        });
+
+    });
+
+    /* Close dropdown when clicking outside */
+    document.addEventListener("click", function (event) {
+
+        registerWrappers.forEach(function (wrapper) {
+
+            if (!wrapper.contains(event.target)) {
+                wrapper.classList.remove("open");
+            }
+
+        });
+
+    });
+
+});

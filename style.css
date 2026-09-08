@@ -3337,3 +3337,399 @@ video {
     }
 
 }
+
+/* ================================
+   REGISTRATION DROPDOWN
+================================ */
+
+.register-wrapper {
+    position: relative;
+}
+
+.register-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.registration-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    background: #0d2034;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 0.25s ease;
+    z-index: 2000;
+}
+
+.registration-menu a {
+    display: block;
+    padding: 15px 17px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.25s ease;
+}
+
+.registration-menu a:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+.registration-menu span {
+    display: block;
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.registration-menu small {
+    display: block;
+    margin-top: 3px;
+    color: #b9c2cc;
+    font-size: 12px;
+}
+
+/* Desktop: open on hover */
+@media (min-width: 769px) {
+    .register-wrapper:hover .registration-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .register-wrapper {
+        width: 100%;
+    }
+
+    .register-wrapper .register-btn {
+        width: 100%;
+    }
+
+    .registration-menu {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        display: none;
+    }
+
+    .registration-menu.show {
+        display: block;
+    }
+}
+
+/* =========================================
+   HOME PAGE - HERO REGISTRATION
+========================================= */
+
+.home-register-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Make Home hero button same proper size */
+.home-register-wrapper > .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+    height: 48px;
+    padding: 0 28px;
+}
+
+/* Dropdown */
+.home-register-wrapper .registration-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+    right: auto;
+
+    transform: translateX(-50%) translateY(-5px);
+
+    width: 260px;
+
+    background: #0d2034;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 14px;
+
+    padding: 8px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.25s ease;
+
+    z-index: 9999;
+}
+
+/* Show on hover */
+.home-register-wrapper:hover .registration-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Individual options */
+.home-register-wrapper .registration-menu a {
+    display: block;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    text-align: center;
+
+    transition: 0.25s ease;
+}
+
+.home-register-wrapper .registration-menu a:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+.home-register-wrapper .registration-menu span {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.home-register-wrapper .registration-menu small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #b9c2cc;
+
+    font-size: 12px;
+}
+
+/* =========================================
+   REGISTRATION DROPDOWN
+   ========================================= */
+
+.register-wrapper {
+    position: relative;
+}
+
+/* Register button */
+.register-wrapper .register-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Dropdown menu */
+.register-wrapper .registration-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 260px;
+
+    background: #0d2034;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 14px;
+
+    padding: 8px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition: 0.25s ease;
+
+    z-index: 2000;
+}
+
+/* Registration options */
+.register-wrapper .registration-menu a {
+    display: block;
+    padding: 15px 17px;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+/* Hover effect */
+.register-wrapper .registration-menu a:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+/* Heading */
+.register-wrapper .registration-menu span {
+    display: block;
+
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Description */
+.register-wrapper .registration-menu small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #b9c2cc;
+    font-size: 12px;
+}
+
+/* Show dropdown */
+.register-wrapper.open .registration-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    .register-wrapper:hover .registration-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .register-wrapper {
+        width: 100%;
+    }
+
+    .register-wrapper .register-btn {
+        width: 100%;
+    }
+
+    .register-wrapper .registration-menu {
+        position: static;
+
+        width: 100%;
+
+        margin-top: 12px;
+
+        display: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .register-wrapper.open .registration-menu {
+        display: block;
+    }
+
+}
+
+/* ===== MOBILE REGISTER BUTTON FIX ===== */
+
+@media (max-width: 768px) {
+
+    /* Keep navbar Register button hidden */
+    .navbar .register-btn {
+        display: none;
+    }
+
+    /* Keep Hero/CTA Register buttons visible */
+    .register-wrapper .register-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Registration dropdown */
+    .register-wrapper .registration-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    /* Show dropdown when opened */
+    .register-wrapper.open .registration-menu {
+        display: block;
+    }
+}
+
+/* =====================================================
+   FINAL MOBILE REGISTRATION FIX
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hide ONLY the navbar Register button */
+    .navbar .register-wrapper .register-btn {
+        display: none !important;
+    }
+
+    /* Keep Hero and CTA Register buttons visible */
+    .hero .register-wrapper .register-btn,
+    .cta .register-wrapper .register-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mobile dropdown */
+    .hero .register-wrapper .registration-menu,
+    .cta .register-wrapper .registration-menu {
+        position: static !important;
+        width: 260px !important;
+        margin-top: 12px !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+
+        display: none !important;
+    }
+
+    /* Open dropdown */
+    .hero .register-wrapper.open .registration-menu,
+    .cta .register-wrapper.open .registration-menu {
+        display: block !important;
+    }
+}
